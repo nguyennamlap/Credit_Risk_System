@@ -9,7 +9,7 @@ This project builds a **logistic regression** model to predict loan default risk
 ```mermaid
 graph LR;
     RawData("Raw Dataset (application_train.csv)") --> EDA[EDA \& Visualization]
-    EDA --> Preprocessing[Data Preprocessing<br>(imputation, encoding, scaling)]
+    EDA --> Preprocessing[Data Preprocessing\n(imputation, encoding, scaling)]
     Preprocessing --> Training[Train Logistic Regression Model]
     Training --> Artifacts[Save Models & Reports]
     Artifacts --> Dashboard[Streamlit Dashboard]
