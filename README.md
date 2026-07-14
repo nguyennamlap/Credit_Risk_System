@@ -7,12 +7,21 @@ This project builds a **logistic regression** model to predict loan default risk
 **Summary:** The repository includes data preprocessing and modeling code under `src/` and `training/`, a Streamlit dashboard in `streamlit/`, plus Dockerfiles for containerization. The workflow pipeline is:
 
 ```mermaid
-graph LR;
-    RawData("Raw Dataset (application_train.csv)") --> EDA[EDA \& Visualization]
-    EDA --> Preprocessing[Data Preprocessing\n(imputation, encoding, scaling)]
-    Preprocessing --> Training[Train Logistic Regression Model]
-    Training --> Artifacts[Save Models & Reports]
-    Artifacts --> Dashboard[Streamlit Dashboard]
+flowchart LR
+    A[Raw Dataset]
+    --> B[EDA and Visualization]
+
+    B
+    --> C[Data Preprocessing]
+
+    C
+    --> D[Train Logistic Regression]
+
+    D
+    --> E[Save Models and Reports]
+
+    E
+    --> F[Streamlit Dashboard]
 ```
 
 GitHub supports embedding Mermaid diagrams like the above for workflows.
